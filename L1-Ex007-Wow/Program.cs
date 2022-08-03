@@ -8,18 +8,18 @@ int x = ax, y = ay; // обозначаем просто точку
 int count = 0;
 
 Console.SetCursorPosition(ax, ay);
-Console.WriteLine("A");
+Console.WriteLine("+");
 Console.SetCursorPosition(bx, by);
-Console.WriteLine("B");
+Console.WriteLine("+");
 Console.SetCursorPosition(cx, cy);
-Console.WriteLine("C");
+Console.WriteLine("+");
 while (count < 10000) 
 {
     int what = new Random().Next(0, 3); // выбираем любое число 0, 1, 2 для выбора рандомной вершины треугольника
 
     if (what == 0) 
     {
-        x = (x + ax) / 2; // вычисляем координаты середины отрезка ПОЧЕМУ СУММА?? НИПАНЯТНА 
+        x = (x + ax) / 2; // вычисляем координаты середины отрезка т.к. координата х = ax + (cx - ax)/2 = (2ax+cx-ax)/2=(ax+cx)/2 
         y = (y + ay) / 2;
     }
 
@@ -35,7 +35,7 @@ while (count < 10000)
         y = (y + cy) / 2;
     }
 
-    Console.SetCursorPosition(x, y);
+    Console.SetCursorPosition(x, y); // задаем координаты найденной точки середины
     Console.WriteLine("+");
     count++;
 }
