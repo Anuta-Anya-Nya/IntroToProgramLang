@@ -30,7 +30,7 @@ int FindNumberIndex(int[] arr, int find)
 }
 
 Console.Write("Какой длины массив? "); //все ломается, если ввести отрицательное число
-int arrayLength = Convert.ToInt32(Console.ReadLine());
+int arrayLength = Convert.ToInt32(Console.ReadLine()); //ввод строки все ломает. Сделать проверку
 while (arrayLength <= 0) //Заставляю пользователя ввести верное число для длины массива
 {
     Console.Write("введено неверное число!");
