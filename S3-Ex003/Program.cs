@@ -15,5 +15,6 @@ double[] b = new double [2];
 Console.WriteLine("Введите координаты точки B:");
 b[0] = Convert.ToInt32(Console.ReadLine());
 b[1] = Convert.ToInt32(Console.ReadLine());
-double distance = Math.Sqrt((a[0] - b[0])*(a[0] - b[0]) + (a[1]-b[1])*(a[1]-b[1]));
+double distance = Math.Sqrt((a[0] - b[0])*(a[0] - b[0]) + (a[1]-b[1])*(a[1]-b[1])); // Math.Pow((a[0]-b[0]), 2) возведение в степень 2
 Console.WriteLine(distance);
+// Math.Sqrt() - корень квадратный
