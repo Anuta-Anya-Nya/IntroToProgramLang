@@ -5,7 +5,7 @@ if (!int.TryParse(Console.ReadLine(), out int result))
     Console.WriteLine("Введено говно!");
     return;
 }
-
+Console.Write(result);
 if (result == 1) Console.Write("Понедельник");
 if (result == 2) Console.Write("Вторник");
 if (result == 3) Console.Write("Среда");
