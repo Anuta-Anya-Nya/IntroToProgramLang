@@ -3,8 +3,15 @@
 Console.Write("Введите число: ");
 int number = Math.Abs(Convert.ToInt32(Console.ReadLine()));
 int multipl=1;
-for (int i=1; i<=number; i++)
+if (number == 0)
 {
-    multipl = multipl * i;
+    Console.Write("Невозможно найти произведение чисел от 1 до 0!");
 }
-Console.Write(multipl);
+else
+{
+    for (int i=1; i<=number; i++)
+    {
+        multipl = multipl * i;
+    }
+    Console.Write(multipl);
+}
