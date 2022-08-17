@@ -8,4 +8,4 @@ for (int i=0; i < 7; i++)
 array[7]=new Random().Next(0, 2); //чтобы после последнего элемента в консоль не выводилась запятая
 Console.Write($"{array[7]}");
 Console.WriteLine(" ");
-Console.WriteLine(String.Join(", ", array));
+Console.WriteLine(String.Join(", ", array)); // Массив выводит строкой без запятой в конце
