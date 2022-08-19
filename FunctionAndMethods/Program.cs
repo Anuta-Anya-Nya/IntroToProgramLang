@@ -6,6 +6,20 @@
         collection[count] = new Random().Next(1, 11);
     }
 }
+int[] FillArrNumb(int leng, int numMin, int numMax) // создает массив заданной длины, с элементами в заданном промежутке
+{
+    while (leng <= 0)
+    {
+        Console.WriteLine("Введено неверное значение! Введите другое: ");
+        leng = Convert.ToInt32(Console.ReadLine());
+    }
+    int[] array = new int[leng];
+    for (int i = 0; i < leng; i++)
+    {
+        array[i] = new Random().Next(numMin, numMax+1);
+    }
+    return array;
+}
 
 void PrintArray(int[] arr) // печатает массив в консоль в строчку
 {
@@ -58,5 +72,5 @@ SortArrayMinMax(testArr);
 PrintArray(testArr);
 Console.WriteLine(" ");
 SortArrayMaxMin(testArr);
-
+Console.WriteLine(String.Join(", ", FillArrNumb(5, 1, 10)));
 Console.WriteLine(String.Join(", ", testArr)); // Массив выводит строкой без запятой в конце!!

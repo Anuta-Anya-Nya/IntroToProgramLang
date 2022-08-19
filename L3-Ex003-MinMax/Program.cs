@@ -31,6 +31,7 @@ void SortArray(int[] array)
         }
     }
 }
-int[] someNumbers = { 3, 1, 2, 0, 7, 1, 4, 4, 8 };
+int[] someNumbers = new int[8];
+FillArray(someNumbers);
 SortArray(someNumbers);
 PrintArray(someNumbers);
