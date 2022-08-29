@@ -16,7 +16,7 @@ int[] FillArrNumb(int leng, int numMin, int numMax) // создает масси
     int[] array = new int[leng];
     for (int i = 0; i < leng; i++)
     {
-        array[i] = new Random().Next(numMin, numMax+1);
+        array[i] = new Random().Next(numMin, numMax + 1);
     }
     return array;
 }
@@ -64,7 +64,34 @@ void SortArrayMaxMin(int[] array) //сортирует массив от мак�
     }
 }
 
-int[] testArr=new int[10];
+int[,] CreateAndPrintMatrix(int m, int n) // создает матрицу m строк на n столбцов из чисел от 0 до 10 и распечатывает
+{
+    int[,] matrix = new int[m, n];
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n; j++)
+        {
+            matrix[i, j] = new Random().Next(0, 11);
+            Console.Write(matrix[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+    return matrix;
+}
+
+void PrintMatrix(int[,] anyMatrix) // Печатает матрицу
+{
+    for (int i = 0; i < anyMatrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < anyMatrix.GetLength(1); j++)
+        {
+            Console.Write(anyMatrix[i, j] + " ");
+        }
+        Console.WriteLine();
+    }
+}
+
+int[] testArr = new int[10];
 FillArray(testArr);
 PrintArray(testArr);
 Console.WriteLine(" ");
@@ -73,4 +100,4 @@ PrintArray(testArr);
 Console.WriteLine(" ");
 SortArrayMaxMin(testArr);
 Console.WriteLine(String.Join(", ", FillArrNumb(5, 1, 10)));
-Console.WriteLine(String.Join(", ", testArr)); // Массив выводит строкой без запятой в конце!!
+Console.WriteLine($"[{String.Join(", ", testArr)}]"); // Массив выводит строкой без запятой в конце!!
