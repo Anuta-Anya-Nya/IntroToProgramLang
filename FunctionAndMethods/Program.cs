@@ -63,8 +63,8 @@ void SortArrayMaxMin(int[] array) //сортирует массив от мак�
         }
     }
 }
-
-int[,] CreateAndPrintMatrix(int m, int n) // создает матрицу m строк на n столбцов из чисел от 0 до 10 и распечатывает
+// создает матрицу m строк на n столбцов из чисел от 0 до 10 и распечатывает
+int[,] CreateAndPrintMatrix(int m, int n)
 {
     int[,] matrix = new int[m, n];
     for (int i = 0; i < m; i++)
@@ -78,8 +78,8 @@ int[,] CreateAndPrintMatrix(int m, int n) // создает матрицу m с�
     }
     return matrix;
 }
-
-void PrintMatrix(int[,] anyMatrix) // Печатает матрицу
+// Печатает матрицу:
+void PrintMatrix(int[,] anyMatrix)
 {
     for (int i = 0; i < anyMatrix.GetLength(0); i++)
     {
@@ -101,3 +101,4 @@ Console.WriteLine(" ");
 SortArrayMaxMin(testArr);
 Console.WriteLine(String.Join(", ", FillArrNumb(5, 1, 10)));
 Console.WriteLine($"[{String.Join(", ", testArr)}]"); // Массив выводит строкой без запятой в конце!!
+PrintMatrix(CreateAndPrintMatrix(3, 4));
